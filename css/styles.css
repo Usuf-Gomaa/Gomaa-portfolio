@@ -1,0 +1,587 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p, .skill-description {
+  white-space: pre-line;
+}
+.project-image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Dark Neon Theme */
+:root {
+    --bg-primary: #000000;
+    --bg-secondary: #141414;
+    --text-primary: #e4e0e0;
+    --text-secondary: #ffffff;
+    --neon-cyan: #ffffff;
+    --neon-purple: #268c61;
+    --neon-pink: #543341;
+    --neon-blue: #171f28;
+    --neon-green: #d0d7d4;
+    --card-bg: rgba(255, 254, 254, 0.8);
+    --shadow: rgba(0, 255, 255, 0.3);
+    --border: rgba(0, 255, 255, 0.5);
+}
+
+/* Light Neon Theme */
+:root[data-theme="light"] {
+    --bg-primary: #f5f5f5; /* لون أبيض مائل للرمادي فاتح جدًا، مريح للعين */
+    --bg-secondary: #e8e8e8; /* رمادي فاتح للخلفيات الثانوية */
+    --text-primary: #1a1a1a; /* أسود غامق لضمان وضوح النص */
+    --text-secondary: #555555; /* رمادي داكن للنصوص الثانوية */
+    --neon-cyan: #00bcd4; /* لون نيون أزرق فاتح وواضح */
+    --neon-purple: #9b59b6; /* لون نيون بنفسجي حيوي */
+    --neon-pink: #ff69b4; /* لون نيون وردي جذاب */
+    --neon-blue: #2980b9; /* لون نيون أزرق قوي */
+    --neon-green: #8bc34a; /* لون نيون أخضر مريح */
+    --card-bg: rgba(255, 255, 255, 0.85); /* شفافية بسيطة للبطاقات */
+    --shadow: rgba(0, 0, 0, 0.1); /* ظل خفيف وناعم */
+    --border: rgba(0, 0, 0, 0.15); /* حدود بسيطة وناعمة */
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* New: Conditional background based on theme */
+:root[data-theme="dark"] body {
+    background-image: 
+        repeating-linear-gradient(
+            0deg,
+            rgba(0, 255, 255, 0.03) 0px,
+            transparent 1px,
+            transparent 2px,
+            rgba(0, 255, 255, 0.03) 3px
+        );
+}
+
+:root[data-theme="light"] body {
+    background-image: none; /* إزالة النقط على الخلفية البيضاء */
+}
+
+/* Neon Text Effect */
+.neon-text {
+    background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    font-family: 'Orbitron', 'Cairo', sans-serif;
+    font-weight: 700;
+}
+
+/* Language Support */
+[lang="en"] {
+    direction: ltr;
+}
+
+[lang="ar"] {
+    direction: rtl;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 255, 255, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand h2 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+.nav-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.lang-toggle,
+.theme-toggle {
+    background: transparent;
+    border: 2px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.lang-toggle:hover,
+.theme-toggle:hover {
+    background-color: var(--neon-cyan);
+    color: var(--bg-primary);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 2rem;
+    background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* تكملة Hero Section */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+    filter: blur(80px);
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.profile-section {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.profile-image {
+    flex-shrink: 0;
+    position: relative;
+}
+
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--neon-cyan);
+    box-shadow: 
+        0 0 30px rgba(0, 255, 255, 0.6),
+        inset 0 0 30px rgba(0, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.profile-image:hover img {
+    box-shadow: 
+        0 0 50px rgba(0, 255, 255, 0.8),
+        inset 0 0 50px rgba(0, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.name {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 3px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--neon-green);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    letter-spacing: 3px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+/* Neon Card Effect */
+.neon-card {
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.9), rgba(30, 30, 30, 0.9));
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.neon-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink), var(--neon-blue));
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+    filter: blur(15px);
+}
+
+.neon-card:hover::before {
+    opacity: 1;
+}
+
+.neon-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 
+        0 20px 40px rgba(0, 255, 255, 0.4),
+        inset 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+.skill-icon {
+    font-size: 3rem;
+    background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5));
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--neon-cyan);
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.skill-card p {
+    color: var(--text-secondary);
+}
+
+/* Skill Detail Section */
+.skill-detail-section {
+    padding: 4rem 2rem;
+    background-color: var(--bg-secondary);
+    min-height: 100vh;
+    position: relative;
+}
+
+.skill-detail-section.hidden {
+    display: none;
+}
+
+.skill-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.back-button {
+    background: transparent;
+    color: var(--neon-cyan);
+    border: 2px solid var(--neon-cyan);
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.back-button:hover {
+    background-color: var(--neon-cyan);
+    color: var(--bg-primary);
+    transform: translateX(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+[lang="en"] .back-button:hover {
+    transform: translateX(5px);
+}
+
+/* Content Sections */
+.content-section {
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.9), rgba(30, 30, 30, 0.9));
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+    border: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.content-section h2 {
+    background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Experience Items */
+.experience-item {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: rgba(0, 255, 255, 0.05);
+    border-radius: 10px;
+    border-right: 4px solid var(--neon-cyan);
+    transition: all 0.3s ease;
+}
+
+[lang="en"] .experience-item {
+    border-right: none;
+    border-left: 4px solid var(--neon-cyan);
+}
+
+.experience-item:hover {
+    background: rgba(0, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+[lang="en"] .experience-item:hover {
+    transform: translateX(-5px);
+}
+
+.experience-item h3 {
+    color: var(--neon-green);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+/* Styling for experience images */
+.experience-item img {
+    max-width: 50%; /* تم تقليل أقصى عرض إلى 50% */
+    height: auto;
+    display: block;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2);
+}
+/* Project Cards */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-card {
+    background: rgba(0, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+    border-color: var(--neon-cyan);
+}
+
+/* هنا التعديل: 
+   نقوم بإزالة الـ background-gradient والـ font-size من .project-image
+   لأنها كانت مخصصة للأيقونة.
+   ثم نضيف خاصية جديدة للـ <img> الموجودة داخلها.
+*/
+.project-image {
+    width: 100%;
+    height: 200px;
+    /* Removed:
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.9), rgba(30, 30, 30, 0.9));
+    color: var(--neon-cyan);
+    font-size: 3rem;
+    */
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    overflow: hidden; /* IMPORTANT: This hides any part of the image that goes outside the container */
+}
+
+/* وهذا هو الكود الجديد الذي يجب إضافته.
+   هذه القاعدة ستطبق فقط على الصور داخل .project-image.
+*/
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* KEY: This scales the image to fill the container while maintaining its aspect ratio */
+    display: block; /* Removes any extra space below the image */
+}
+
+.project-card h4 {
+    color: var(--neon-pink);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(255, 0, 110, 0.5);
+}
+/* CV Download Button */
+.cv-download {
+    background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
+    color: var(--bg-primary);
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
+    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.4);
+}
+
+.cv-download:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.6);
+}
+
+/* Social Links Footer */
+.social-links {
+    text-align: center;
+    padding: 3rem 0;
+    background: rgba(20, 20, 20, 0.5);
+}
+
+.neon-social {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: transparent;
+    color: var(--neon-cyan);
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+    border: 2px solid var(--neon-cyan);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.neon-social:hover {
+    background: var(--neon-cyan);
+    color: var(--bg-primary);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 30px rgba(0, 255, 255, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .name {
+        font-size: 2rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations */
+@keyframes neonPulse {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+    }
+}
+
+.neon-text {
+    animation: neonPulse 2s ease-in-out infinite;
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(0, 255, 255, 0.2);
+    border-radius: 50%;
+    border-top-color: var(--neon-cyan);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
