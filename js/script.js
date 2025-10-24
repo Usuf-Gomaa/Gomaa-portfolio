@@ -721,7 +721,7 @@ to understand web development from design to practical implementation.
     {
         title: 'PLC Simulation – Box Filling System',
         description: 'A full simulation of an automated box filling system using PLC, integrating sensors, conveyors, and actuators for efficient production control.',
-        video: "vid/PLC_tasks/PLC_5.mp4"
+        video: "vid/PLC_tasks/plc_5.mp4"
     },
     {
         title: 'PLC Simulation – Conveyor & Pusher Production Line',
