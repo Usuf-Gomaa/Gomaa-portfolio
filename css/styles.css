@@ -26,25 +26,29 @@ p, .skill-description {
     --neon-pink: #543341;
     --neon-blue: #171f28;
     --neon-green: #d0d7d4;
-    --card-bg: rgba(255, 254, 254, 0.8);
+    --card-bg: rgba(20, 20, 20, 0.9);
+    --card-bg-hover: rgba(0, 255, 255, 0.05);
+    --navbar-bg: rgba(10, 10, 10, 0.95);
     --shadow: rgba(0, 255, 255, 0.3);
     --border: rgba(0, 255, 255, 0.5);
 }
 
 /* Light Neon Theme */
 :root[data-theme="light"] {
-    --bg-primary: #f5f5f5; /* لون أبيض مائل للرمادي فاتح جدًا، مريح للعين */
-    --bg-secondary: #e8e8e8; /* رمادي فاتح للخلفيات الثانوية */
-    --text-primary: #1a1a1a; /* أسود غامق لضمان وضوح النص */
-    --text-secondary: #555555; /* رمادي داكن للنصوص الثانوية */
-    --neon-cyan: #00bcd4; /* لون نيون أزرق فاتح وواضح */
-    --neon-purple: #9b59b6; /* لون نيون بنفسجي حيوي */
-    --neon-pink: #ff69b4; /* لون نيون وردي جذاب */
-    --neon-blue: #2980b9; /* لون نيون أزرق قوي */
-    --neon-green: #8bc34a; /* لون نيون أخضر مريح */
-    --card-bg: rgba(255, 255, 255, 0.85); /* شفافية بسيطة للبطاقات */
-    --shadow: rgba(0, 0, 0, 0.1); /* ظل خفيف وناعم */
-    --border: rgba(0, 0, 0, 0.15); /* حدود بسيطة وناعمة */
+    --bg-primary: #f5f5f5;
+    --bg-secondary: #e8e8e8;
+    --text-primary: #1a1a1a;
+    --text-secondary: #555555;
+    --neon-cyan: #00bcd4;
+    --neon-purple: #9b59b6;
+    --neon-pink: #ff69b4;
+    --neon-blue: #2980b9;
+    --neon-green: #27ae60;
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --card-bg-hover: rgba(0, 188, 212, 0.05);
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+    --shadow: rgba(0, 0, 0, 0.1);
+    --border: rgba(0, 0, 0, 0.15);
 }
 
 body {
@@ -68,7 +72,7 @@ body {
 }
 
 :root[data-theme="light"] body {
-    background-image: none; /* إزالة النقط على الخلفية البيضاء */
+    background-image: none;
 }
 
 /* Neon Text Effect */
@@ -77,9 +81,16 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
     font-family: 'Orbitron', 'Cairo', sans-serif;
     font-weight: 700;
+}
+
+:root[data-theme="dark"] .neon-text {
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+:root[data-theme="light"] .neon-text {
+    text-shadow: none;
 }
 
 /* Language Support */
@@ -93,14 +104,21 @@ body {
 
 /* Navigation Bar */
 .navbar {
-    background-color: rgba(10, 10, 10, 0.95);
+    background-color: var(--navbar-bg);
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 20px rgba(0, 255, 255, 0.3);
     position: sticky;
     top: 0;
     z-index: 1000;
     padding: 1rem 0;
     transition: all 0.3s ease;
+}
+
+:root[data-theme="dark"] .navbar {
+    box-shadow: 0 2px 20px rgba(0, 255, 255, 0.3);
+}
+
+:root[data-theme="light"] .navbar {
+    box-shadow: 0 2px 10px var(--shadow);
 }
 
 .nav-container {
@@ -135,29 +153,49 @@ body {
     align-items: center;
     gap: 0.5rem;
     transition: all 0.3s ease;
+}
+
+:root[data-theme="dark"] .lang-toggle,
+:root[data-theme="dark"] .theme-toggle {
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+:root[data-theme="light"] .lang-toggle,
+:root[data-theme="light"] .theme-toggle {
+    box-shadow: 0 2px 5px var(--shadow);
 }
 
 .lang-toggle:hover,
 .theme-toggle:hover {
     background-color: var(--neon-cyan);
     color: var(--bg-primary);
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
     transform: scale(1.05);
+}
+
+:root[data-theme="dark"] .lang-toggle:hover,
+:root[data-theme="dark"] .theme-toggle:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+:root[data-theme="light"] .lang-toggle:hover,
+:root[data-theme="light"] .theme-toggle:hover {
+    box-shadow: 0 4px 10px var(--shadow);
 }
 
 /* Hero Section */
 .hero {
     padding: 4rem 2rem;
-    background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
     min-height: 60vh;
     display: flex;
     align-items: center;
     position: relative;
 }
 
-/* تكملة Hero Section */
-.hero::before {
+:root[data-theme="dark"] .hero {
+    background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+}
+
+:root[data-theme="dark"] .hero::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -194,17 +232,31 @@ body {
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--neon-cyan);
-    box-shadow: 
-        0 0 30px rgba(0, 255, 255, 0.6),
-        inset 0 0 30px rgba(0, 255, 255, 0.3);
     transition: all 0.3s ease;
 }
 
+:root[data-theme="dark"] .profile-image img {
+    box-shadow: 
+        0 0 30px rgba(0, 255, 255, 0.6),
+        inset 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+:root[data-theme="light"] .profile-image img {
+    box-shadow: 0 5px 20px var(--shadow);
+}
+
 .profile-image:hover img {
+    transform: scale(1.05);
+}
+
+:root[data-theme="dark"] .profile-image:hover img {
     box-shadow: 
         0 0 50px rgba(0, 255, 255, 0.8),
         inset 0 0 50px rgba(0, 255, 255, 0.4);
-    transform: scale(1.05);
+}
+
+:root[data-theme="light"] .profile-image:hover img {
+    box-shadow: 0 8px 30px var(--shadow);
 }
 
 .profile-info {
@@ -221,6 +273,9 @@ body {
     font-size: 1.2rem;
     color: var(--neon-green);
     margin-bottom: 1.5rem;
+}
+
+:root[data-theme="dark"] .subtitle {
     text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
 }
 
@@ -257,18 +312,17 @@ body {
 
 /* Neon Card Effect */
 .neon-card {
-    background: linear-gradient(145deg, rgba(20, 20, 20, 0.9), rgba(30, 30, 30, 0.9));
+    background: var(--card-bg);
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
     transition: all 0.3s ease;
-    cursor: pointer;
-    border: 1px solid transparent;
+    border: 1px solid var(--border);
     position: relative;
     overflow: hidden;
 }
 
-.neon-card::before {
+:root[data-theme="dark"] .neon-card::before {
     content: '';
     position: absolute;
     top: -2px;
@@ -283,15 +337,26 @@ body {
     filter: blur(15px);
 }
 
-.neon-card:hover::before {
+:root[data-theme="dark"] .neon-card:hover::before {
     opacity: 1;
 }
 
 .neon-card:hover {
     transform: translateY(-10px);
+}
+
+:root[data-theme="dark"] .neon-card:hover {
     box-shadow: 
         0 20px 40px rgba(0, 255, 255, 0.4),
         inset 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+:root[data-theme="light"] .neon-card {
+    box-shadow: 0 2px 10px var(--shadow);
+}
+
+:root[data-theme="light"] .neon-card:hover {
+    box-shadow: 0 10px 30px var(--shadow);
 }
 
 .skill-icon {
@@ -301,6 +366,9 @@ body {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
+}
+
+:root[data-theme="dark"] .skill-icon {
     filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5));
 }
 
@@ -308,6 +376,9 @@ body {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     color: var(--neon-cyan);
+}
+
+:root[data-theme="dark"] .skill-card h3 {
     text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 
@@ -345,14 +416,28 @@ body {
     align-items: center;
     gap: 0.5rem;
     transition: all 0.3s ease;
+}
+
+:root[data-theme="dark"] .back-button {
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+:root[data-theme="light"] .back-button {
+    box-shadow: 0 2px 5px var(--shadow);
 }
 
 .back-button:hover {
     background-color: var(--neon-cyan);
     color: var(--bg-primary);
     transform: translateX(-5px);
+}
+
+:root[data-theme="dark"] .back-button:hover {
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+:root[data-theme="light"] .back-button:hover {
+    box-shadow: 0 4px 10px var(--shadow);
 }
 
 [lang="en"] .back-button:hover {
@@ -361,12 +446,19 @@ body {
 
 /* Content Sections */
 .content-section {
-    background: linear-gradient(145deg, rgba(20, 20, 20, 0.9), rgba(30, 30, 30, 0.9));
+    background: var(--card-bg);
     padding: 2.5rem;
     margin-bottom: 2rem;
     border-radius: 15px;
+    border: 1px solid var(--border);
+}
+
+:root[data-theme="dark"] .content-section {
     box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
-    border: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+:root[data-theme="light"] .content-section {
+    box-shadow: 0 4px 15px var(--shadow);
 }
 
 .content-section h2 {
@@ -385,7 +477,7 @@ body {
 .experience-item {
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    background: rgba(0, 255, 255, 0.05);
+    background: var(--card-bg-hover);
     border-radius: 10px;
     border-right: 4px solid var(--neon-cyan);
     transition: all 0.3s ease;
@@ -397,8 +489,12 @@ body {
 }
 
 .experience-item:hover {
-    background: rgba(0, 255, 255, 0.1);
+    background: var(--card-bg-hover);
     transform: translateX(5px);
+}
+
+:root[data-theme="light"] .experience-item:hover {
+    box-shadow: 0 2px 8px var(--shadow);
 }
 
 [lang="en"] .experience-item:hover {
@@ -409,18 +505,28 @@ body {
     color: var(--neon-green);
     margin-bottom: 0.5rem;
     font-size: 1.3rem;
+}
+
+:root[data-theme="dark"] .experience-item h3 {
     text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
 }
 
-/* Styling for experience images */
 .experience-item img {
-    max-width: 50%; /* تم تقليل أقصى عرض إلى 50% */
+    max-width: 50%;
     height: auto;
     display: block;
     margin-top: 15px;
     border-radius: 8px;
+}
+
+:root[data-theme="dark"] .experience-item img {
     box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2);
 }
+
+:root[data-theme="light"] .experience-item img {
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
 /* Project Cards */
 .projects-grid {
     display: grid;
@@ -430,60 +536,58 @@ body {
 }
 
 .project-card {
-    background: rgba(0, 255, 255, 0.05);
+    background: var(--card-bg-hover);
     padding: 1.5rem;
     border-radius: 10px;
     transition: all 0.3s ease;
-    border: 1px solid rgba(0, 255, 255, 0.2);
+    border: 1px solid var(--border);
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
     border-color: var(--neon-cyan);
 }
 
-/* هنا التعديل: 
-   نقوم بإزالة الـ background-gradient والـ font-size من .project-image
-   لأنها كانت مخصصة للأيقونة.
-   ثم نضيف خاصية جديدة للـ <img> الموجودة داخلها.
-*/
+:root[data-theme="dark"] .project-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+}
+
+:root[data-theme="light"] .project-card:hover {
+    box-shadow: 0 8px 20px var(--shadow);
+}
+
 .project-image {
     width: 100%;
     height: 200px;
-    /* Removed:
-    background: linear-gradient(145deg, rgba(20, 20, 20, 0.9), rgba(30, 30, 30, 0.9));
-    color: var(--neon-cyan);
-    font-size: 3rem;
-    */
     border-radius: 8px;
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(0, 255, 255, 0.2);
-    overflow: hidden; /* IMPORTANT: This hides any part of the image that goes outside the container */
+    border: 1px solid var(--border);
+    overflow: hidden;
 }
 
-/* وهذا هو الكود الجديد الذي يجب إضافته.
-   هذه القاعدة ستطبق فقط على الصور داخل .project-image.
-*/
 .project-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* KEY: This scales the image to fill the container while maintaining its aspect ratio */
-    display: block; /* Removes any extra space below the image */
+    object-fit: cover;
+    display: block;
 }
 
 .project-card h4 {
     color: var(--neon-pink);
     margin-bottom: 0.5rem;
+}
+
+:root[data-theme="dark"] .project-card h4 {
     text-shadow: 0 0 10px rgba(255, 0, 110, 0.5);
 }
+
 /* CV Download Button */
 .cv-download {
     background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
-    color: var(--bg-primary);
+    color: #fff;
     text-decoration: none;
     padding: 1rem 2.5rem;
     border-radius: 30px;
@@ -494,19 +598,41 @@ body {
     font-weight: bold;
     transition: all 0.3s ease;
     margin-top: 1.5rem;
+}
+
+:root[data-theme="dark"] .cv-download {
     box-shadow: 0 5px 20px rgba(0, 255, 255, 0.4);
 }
 
+:root[data-theme="light"] .cv-download {
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+/* CV Download Button - تكملة */
 .cv-download:hover {
     transform: translateY(-3px);
+}
+
+:root[data-theme="dark"] .cv-download:hover {
     box-shadow: 0 10px 30px rgba(0, 255, 255, 0.6);
+}
+
+:root[data-theme="light"] .cv-download:hover {
+    box-shadow: 0 8px 25px var(--shadow);
 }
 
 /* Social Links Footer */
 .social-links {
     text-align: center;
     padding: 3rem 0;
+}
+
+:root[data-theme="dark"] .social-links {
     background: rgba(20, 20, 20, 0.5);
+}
+
+:root[data-theme="light"] .social-links {
+    background: var(--bg-secondary);
 }
 
 .neon-social {
@@ -522,14 +648,29 @@ body {
     border-radius: 50%;
     border: 2px solid var(--neon-cyan);
     transition: all 0.3s ease;
+}
+
+:root[data-theme="dark"] .neon-social {
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+:root[data-theme="light"] .neon-social {
+    box-shadow: 0 2px 8px var(--shadow);
 }
 
 .neon-social:hover {
     background: var(--neon-cyan);
-    color: var(--bg-primary);
     transform: translateY(-5px);
+}
+
+:root[data-theme="dark"] .neon-social:hover {
+    color: var(--bg-primary);
     box-shadow: 0 5px 30px rgba(0, 255, 255, 0.6);
+}
+
+:root[data-theme="light"] .neon-social:hover {
+    color: #fff;
+    box-shadow: 0 5px 20px var(--shadow);
 }
 
 /* Responsive Design */
@@ -567,8 +708,12 @@ body {
     }
 }
 
-.neon-text {
+:root[data-theme="dark"] .neon-text {
     animation: neonPulse 2s ease-in-out infinite;
+}
+
+:root[data-theme="light"] .neon-text {
+    animation: none;
 }
 
 /* Loading Animation */
@@ -576,7 +721,7 @@ body {
     display: inline-block;
     width: 20px;
     height: 20px;
-    border: 3px solid rgba(0, 255, 255, 0.2);
+    border: 3px solid var(--border);
     border-radius: 50%;
     border-top-color: var(--neon-cyan);
     animation: spin 1s ease-in-out infinite;

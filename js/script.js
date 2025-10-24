@@ -223,7 +223,8 @@ CAN & LIN Protocols في مجال الـ Embedded Systems.
 كان دوري قيادة المشروع والإشراف على جوانب السوفتوير والهاردوير، 
 من الفكرة وحتى التنفيذ، لضمان تحقيق أعلى معايير الجودة والابتكار.
 `,
-                        image: 'img/Smart_house.jpg'
+                        video: "/vid/البيت الذكي .mp4"
+                        
                     },
                     {
                         title: 'Smart Green House with IoT',
@@ -243,7 +244,7 @@ CAN & LIN Protocols في مجال الـ Embedded Systems.
 المشاركة في تطوير السوفتوير، 
 وتكامل الـ IoT لمتابعة البيانات في الزمن الحقيقي.
 `,
-                        image: 'img/aquabonic.jpg'
+                        video: "/vid/Agre_Tech.mp4"
                     },
                     {
                         title: 'Dual Mode RC Car',
@@ -275,6 +276,18 @@ CAN & LIN Protocols في مجال الـ Embedded Systems.
                         image: 'img/aquabonic2.jpg'
                     }
                 ],
+    //              projects_videos: [
+    // {
+    //     title: 'نظام المنزل الذكي',
+    //     description: 'مشروع يعتمد على إنترنت الأشياء للتحكم الذكي في الأجهزة باستخدام الأنظمة المدمجة وأجهزة الاستشعار.',
+    //     video: "/vid/البيت الذكي .mp4"
+    // },
+    // {
+    //     title: 'مشروع الزراعة الذكية ',
+    //     description: 'نظام أكوابونيك ذكي يجمع بين الذكاء الاصطناعي وإنترنت الأشياء ولوحة تحكم ويب لمراقبة وتحسين الزراعة المستدامة.',
+    //     video: "/vid/Agre_Tech.mp4"
+    // }
+// ],
                 cvPath: 'C.V/Embedded/Yousef Gomaa.pdf'
             },
             en: {
@@ -368,7 +381,7 @@ My role focused on leading the project and overseeing
 both software and hardware aspects — from concept to execution — 
 to ensure top quality and innovation.
 `,
-                        image: 'img/Smart_house.jpg'
+                        video: "/vid/البيت الذكي .mp4"
                     },
                     {
                         title: 'Smart Green House with IoT',
@@ -389,7 +402,7 @@ Project planning and management, circuit design and integration,
 co-developing embedded software, 
 and implementing IoT for real-time data visualization and control.
 `,
-                        image: 'img/aquabonic.jpg'
+                        video: "/vid/Agre_Tech.mp4"
                     },
                     {
                         title: 'Dual Mode RC Car',
@@ -421,6 +434,19 @@ to build a fully functional and efficient system.
                         image: 'img/aquabonic2.jpg'
                     }
                 ],
+//                 projects: [
+//     {
+//         title: 'Smart Home System',
+//         description: 'An IoT-based smart home project integrating embedded systems, sensors, and automation for intelligent control.',
+//         video: "/vid/البيت الذكي .mp4"
+//     },
+//     {
+//         title: 'Agri-Tech ',
+//         description: 'A smart aquaponic system that combines AI, IoT, and web dashboards to monitor and optimize sustainable farming.',
+//         video: "/vid/Agre_Tech.mp4"
+//     }
+// ],
+
                 cvPath: 'C.V/Embedded/Yousef Gomaa.pdf'
             }
         },
@@ -567,10 +593,6 @@ to understand web development from design to practical implementation.
                         description: 'Service page for selling Islamic books',
                         video: 'vid/service_page.mp4'
                     },
-                    // {
-                    //     title: 'Portfolio Page',
-                    //     description: 'Personal portfolio page',
-                    // },
                     {
                         title: 'Aquaponic Dashboard',
                         description: 'Dashboard for Aquaponic project',
@@ -581,71 +603,264 @@ to understand web development from design to practical implementation.
             }
         },
         automation: {
-            ar: {
-                title: 'الأتمتة',
-                description: 'خبرة في مجال التحكم الآلي والأتمتة الصناعية',
-                experience: [
-                    {
-                        title: 'دورة HA في التحكم الكلاسيكي',
-                        description: 'أخذت كورس شامل في مجال الكلاسيك كنترول، PLC، Building Automation، وMotor Drivers',
-                    },
-                    {
-                        title: 'تدريب بيدو',
-                        description: 'احتكيت ببعض تطبيقات الأتمتة خلال تدريبي في شركة بيدو',
-                    }
-                ],
-                projects: [],
-                cvPath: 'C.V/Embedded/Yousef Gomaa.pdf'
+    ar: {
+        title: 'الأتمتة',
+        description: 'خبرة قوية في مجال التحكم الآلي والأتمتة الصناعية، تشمل التدريب العملي والنظري على أنظمة التحكم الكلاسيكية والـ PLC وأنظمة القيادة والمحاكاة الصناعية.',
+        experience: [
+            {
+                title: 'دورة HA في التحكم الكلاسيكي والأتمتة',
+                description: `
+                    التحقت بدورة شاملة في مركز HA، تعلمت خلالها أساسيات وأنظمة التحكم الكلاسيكي (Classic Control)،
+                    وأنظمة التحكم المنطقي المبرمج (PLC)، ومحركات القيادة (Motor Drivers).
+                    تعاملت مع أنواع مختلفة من الـ PLC من شركات مثل Siemens وSchneider وغيرها،
+                    كما استخدمت برامج المحاكاة الصناعية مثل CAD وFactory I/O لتطبيق المشاريع بشكل عملي.
+                    
+                    خلال التدريب، أتممت أكثر من 60 مهمة عملية، تضمنت:
+                    - 30 مهمة Classic Control
+                    - 10 مهام باستخدام Factory I/O أو برامج المحاكاة
+                    - 10 تطبيقات فعلية على PLC من نوع Siemens
+                    - 3 تطبيقات للتحكم في حساسات عبر PLC
+                    - 1 تطبيق للتحكم في حساس عبر Classic Control
+                    - 3 أنواع مختلفة من Motor Drivers
+                    - 3 مشاريع على PLCs من شركات مختلفة
+                    `,
+                    image: "/img/HA6jpg.jpg",
+                    // image: "/img/HA7jpg.jpg",
+                    // image: "/img/HA2jpg.jpg"
+
             },
-            en: {
-                title: 'Automation',
-                description: 'Experience in automatic control and industrial automation',
-                experience: [
-                    {
-                        title: 'HA Course in Classic Control',
-                        description: 'Took comprehensive course in classic control, PLC, Building Automation, and Motor Drivers',
-                    },
-                    {
-                        title: 'Bedo Training',
-                        description: 'Gained exposure to automation applications during training at Bedo Company',
-                    }
-                ],
-                projects: [],
-                cvPath: 'C.V/Embedded/Yousef Gomaa.pdf'
+            {
+                title: 'تدريب في شركة مـام (MAM) – وكيل شنايدر إليكتريك في مصر',
+                description: `
+                    تشرفت بالحصول على تدريب ميداني في شركة مـام، الوكيل الرسمي لشنايدر إليكتريك في مصر.
+                    كان تدريبًا مميزًا وغنيًا بالمحتوى، حيث تعلمت فيه جميع مراحل عمل الشركة بدءًا من قسم المبيعات (Sales)،
+                    مرورًا بقسم العطاءات والتصميم (Tender & Design Department)، ثم الإنتاج (Production) وضبط الجودة (Quality Control).
+                    
+                    خلال التدريب، تعرفت على بيئة العمل الصناعية وكيفية إدارة المشاريع من مرحلة التصميم إلى التنفيذ.
+                    كما أُتيحت لي الفرصة للتعامل مباشرة مع الرئيس التنفيذي للشركة (CEO)، وكانت تجربة تعليمية وإنسانية رائعة.
+                `,
+                 image: "/img/MAM1.jpg",
             }
-        },
-        pm: {
-            ar: {
-                title: 'إدارة المشاريع',
-                description: 'خبرة في إدارة المشاريع وفق معايير PMI',
-                experience: [
-                    {
-                        title: 'دورة PMP',
-                        description: 'دورة 35 ساعة من مدرب PMP معتمد من PMI',
-                    },
-                    {
-                        title: 'دورات إدارية من HP',
-                        description: 'دورات جانبية في الإدارة من شركة HP',
-                    }
-                ],
-                cvPath: 'C.V/Embedded/Yousef Gomaa.pdf'
+        ],
+       projects: [
+    {
+        title: 'دائرة غسالة – Classic Control',
+        description: 'تطبيق عملي على دائرة تحكم لغسالة باستخدام التحكم الكلاسيكي، يشمل التوصيلات الكهربية وعناصر الحماية والتتابع.',
+        video: "/vid/CLASSIC.mp4"
+    },
+    {
+        title: 'محاكاة PLC – كشف الألوان (Color Detection)',
+        description: 'مشروع محاكاة باستخدام PLC Simulation للتعرف على الألوان وفرز العناصر حسب اللون، ضمن تطبيقات التحكم الصناعي الذكي.',
+        video: "/vid/PLC_tasks/task2.mp4"
+    },
+    {
+        title: 'محاكاة PLC – تعبئة الصناديق (Box Filling)',
+        description: 'محاكاة متكاملة لعملية تعبئة الصناديق باستخدام PLC، تشمل الحساسات والسيور والمحركات لتنظيم عملية الإنتاج.',
+        video: "/vid/PLC_tasks/PLC_5.mp4"
+    },
+    {
+        title: 'محاكاة PLC – خط إنتاج بسير وبوشر (Conveyor & Pusher Line)',
+        description: 'نموذج محاكاة لخط إنتاج صناعي يحتوي على سير ناقل وبوشر لفرز المنتجات بشكل آلي باستخدام PLC وبرامج المحاكاة.',
+        video: "/vid/PLC_tasks/PLC_1.mp4"
+    }
+],
+
+        cvPath: 'C.V/Embedded/Yousef Gomaa.pdf'
+    },
+    en: {
+        title: 'Automation',
+        description: 'Strong background in automatic control and industrial automation, with both practical and theoretical experience in classic control, PLC systems, motor drivers, and industrial simulations.',
+        experience: [
+            {
+                title: 'HA Course in Classic Control and Automation',
+                description: `
+                    I completed a comprehensive course at HA, covering Classic Control, PLC systems, and Motor Drivers.
+                    I worked with multiple PLC types from Siemens, Schneider, and others, and practiced using industrial simulation tools such as CAD and Factory I/O.
+
+                    Throughout the training, I accomplished over 60 technical tasks, including:
+                    - 30 Classic Control tasks  
+                    - 10 Factory I/O or simulation projects  
+                    - 10 hands-on implementations on Siemens PLCs  
+                    - 3 sensor control tasks via PLC  
+                    - 1 sensor control task via Classic Control  
+                    - 3 different Motor Drivers  
+                    - 3 PLC projects on different brands
+                    
+                    
+                `,
+                image: "/img/HA6jpg.jpg",
+
             },
-            en: {
-                title: 'Project Management',
-                description: 'Experience in project management according to PMI standards',
-                experience: [
-                    {
-                        title: 'PMP Course',
-                        description: '35-hour course from certified PMP instructor from PMI',
-                    },
-                    {
-                        title: 'HP Management Courses',
-                        description: 'Additional management courses from HP',
-                    }
-                ],
-                cvPath: 'C.V/Embedded/Yousef Gomaa.pdf'
+            {
+                title: 'Training at MAM – Official Schneider Electric Representative in Egypt',
+                description: `
+                    I had the honor of training at MAM, the official representative of Schneider Electric in Egypt.
+                    It was an enriching experience where I learned about the company’s full workflow — from Sales, through Tender & Design,
+                    to Production and Quality Control.
+
+                    During the training, I gained valuable exposure to the industrial environment and project management processes.
+                    I also had the opportunity to meet and communicate with the company’s CEO, which made the experience even more insightful and inspiring.
+                
+                `,
+                 image: "/img/MAM1.jpg",
             }
-        },
+        ],
+        projects: [
+    {
+        title: 'Washing Machine Circuit – Classic Control',
+        description: 'A practical project implementing a washing machine circuit using classic control methods, including electrical wiring, protection devices, and relays.',
+        video: "/vid/CLASSIC.mp4"
+    },
+    {
+        title: 'PLC Simulation – Color Detection',
+        description: 'A PLC simulation project for color detection and sorting, demonstrating the use of sensors and logic control in smart industrial applications.',
+        video: "/vid/PLC_tasks/task2.mp4"
+    },
+    {
+        title: 'PLC Simulation – Box Filling System',
+        description: 'A full simulation of an automated box filling system using PLC, integrating sensors, conveyors, and actuators for efficient production control.',
+        video: "/vid/PLC_tasks/PLC_5.mp4"
+    },
+    {
+        title: 'PLC Simulation – Conveyor & Pusher Production Line',
+        description: 'An industrial line simulation featuring a conveyor and pusher system controlled by PLC, designed for automated product handling and sorting.',
+        video: "/vid/PLC_tasks/PLC_1.mp4"
+    }
+],
+
+        cvPath: 'C.V/Embedded/Yousef Gomaa.pdf'
+    }
+},
+
+       pm: {
+    ar: {
+        title: 'إدارة المشاريع',
+        description: 'خبرة في إدارة وتنفيذ المشاريع التقنية والتعليمية وفق معايير PMI، مع تطبيق أساليب الإدارة المرنة Agile وScrum لتعزيز الأداء، وتحقيق الأهداف التشغيلية والاستراتيجية، وتنمية مهارات القيادة والعمل الجماعي.',
+        experience: [
+            {
+                title: 'دورة PMP',
+                description: `
+- اجتزت دورة معتمدة من PMI تحت إشراف الدكتور أحمد حسن (جامعة القاهرة).  
+- دراسة تفصيلية لمجالات المعرفة في إدارة المشاريع (Integration, Scope, Schedule, Cost, Quality, Risk, Stakeholder).  
+- تطبيق أدوات مثل Work Breakdown Structure (WBS) وCritical Path Method (CPM).  
+- تعلم إدارة فرق العمل وتخصيص الموارد ومراقبة الأداء عبر مؤشرات KPI وBaseline.  
+- اكتساب مهارات إعداد Project Charter وStakeholder Register وتحليل المخاطر واتخاذ القرارات الاستراتيجية.`
+            },
+            {
+                title: 'دورات HP في الإدارة',
+                description: `
+- حاصل على عدة شهادات في Agile Management وScrum من شركة HP.  
+- تطبيق مبادئ Agile Mindset في إدارة الفرق والتخطيط الدوري (Sprint Planning).  
+- استخدام Scrum Framework في إدارة Product Backlog وDaily Stand-ups.  
+- تحسين كفاءة الفريق عبر تحليل Velocity وتنفيذ Sprint Retrospective.  
+- تطوير مهارات القيادة التكيفية (Adaptive Leadership) والتواصل مع Stakeholders لتحقيق أعلى كفاءة.`
+            },
+            {
+                title: 'برنامج Aspire الدولي (جامعة Harvest)',
+                description: `
+- تم قبولي في برنامج Aspire الدولي المقدم من جامعة Harvest والمتخصص في Leadership, Management, and Entrepreneurship.  
+- تطوير مهارات القيادة والتخطيط الاستراتيجي وبناء فرق العمل عالية الأداء.  
+- دراسة نماذج الأعمال (Business Models) وإدارة الابتكار واتخاذ القرار في بيئة عالمية.  
+- تطبيق المفاهيم في مشاريع واقعية ضمن فرق متعددة الثقافات.  
+- المشاركة المستمرة في البرنامج بهدف تعزيز مهارات القيادة وريادة الأعمال.`,
+image: 'img/Aspire_logo.webp'
+            },
+            {
+                title: 'مشروع Sumo Robot',
+                description: `
+- أول مشروع أدرت فيه فريقاً بصفتي Project Manager.  
+- إدارة الفريق عن بُعد باستخدام أدوات التعاون (Trello, Slack).  
+- إعداد خطة المشروع وجدول المهام باستخدام Gantt Chart ومتابعة مؤشرات الأداء.  
+- تنظيم الاجتماعات الأسبوعية ومتابعة الإنجاز وتوزيع الأدوار.  
+- قيادة الفريق للوصول إلى المرحلة النهائية في مسابقة IEEE على مستوى مصر.`
+            },
+            {
+                title: 'Software Head',
+                description: `
+- إعادة هيكلة اللجنة وتحديد الأدوار والمسؤوليات (Roles & Responsibilities).  
+- بناء نظام إدارة معرفة (Knowledge Base) يشمل التوثيق والمحتوى التدريبي.  
+- تطبيق منهجية Continuous Improvement لتحسين الأداء العام.  
+- إعداد خطة تطوير مستدامة تضمن استمرارية العمل وتتابع القيادة بفاعلية.`
+            },
+            {
+                title: 'Team Leader',
+                description: `
+- تنفيذ جلسات TOT لتأهيل القيادات الجديدة داخل الفريق.  
+- تنظيم ورش عمل خارجية (External Workshops) للتوسع المجتمعي والتفاعل المؤسسي.  
+- الإشراف على عمليات التوظيف (Recruitment) وتنظيم Booths تعريفية.  
+- قيادة الفريق في مسابقتين والوصول إلى النهائيات في كل منهما.  
+- تطبيق أدوات مثل RACI Matrix وتحليل أداء الفرق لرفع الكفاءة والالتزام.`,
+ image: 'img/team_leader.jpg'
+
+            }
+        ],
+        cvPath: 'C.V/Embedded/Yousef Gomaa.pdf'
+    },
+    en: {
+        title: 'Project Management',
+        description: 'Experienced in managing technical and educational projects aligned with PMI standards, applying Agile and Scrum methodologies to enhance team efficiency, leadership performance, and strategic goal achievement.',
+        experience: [
+            {
+                title: 'PMP Course',
+                description: `
+- Completed a 35-hour PMI-accredited PMP course with Dr. Ahmed Hassan (Cairo University).  
+- Acquired in-depth understanding of PM knowledge areas: Integration, Scope, Schedule, Cost, Quality, Risk, and Stakeholder Management.  
+- Applied professional tools like Work Breakdown Structure (WBS) and Critical Path Method (CPM).  
+- Gained skills in resource allocation, baseline control, and KPI tracking.  
+- Developed competencies in creating Project Charters, Stakeholder Registers, and Risk Analysis plans.`
+            },
+            {
+                title: 'HP Management Courses',
+                description: `
+- Earned multiple certifications in Agile Management and Scrum from HP.  
+- Applied Agile Mindset principles for adaptive planning and iterative delivery.  
+- Implemented Scrum Framework including Sprint Planning, Product Backlog Management, and Daily Stand-ups.  
+- Enhanced team productivity through Velocity tracking and Sprint Retrospectives.  
+- Strengthened communication, stakeholder engagement, and adaptive leadership skills.`
+            },
+            {
+                title: 'Aspire International Program (Harvest University)',
+                description: `
+- Accepted into the Aspire International Program by Harvest University, focusing on Leadership, Management, and Entrepreneurship.  
+- Developing advanced skills in strategic planning, decision-making, and high-performance team leadership.  
+- Learning business model innovation, problem-solving, and effective communication in global contexts.  
+- Applying leadership principles through real-world group projects with international participants.  
+- Currently enrolled and actively participating to further enhance leadership and entrepreneurial capabilities.`,
+
+image: 'img/Aspire_logo.webp'
+            },
+            {
+                title: 'Sumo Robot Project',
+                description: `
+- Served as Project Manager leading a remote multidisciplinary team.  
+- Created detailed project schedules (Gantt Charts) and defined clear deliverables.  
+- Utilized tools like Trello and Slack for task management and progress tracking.  
+- Conducted weekly review meetings and monitored project KPIs.  
+- Successfully reached the final stage of the IEEE Egypt national competition.`
+            },
+            {
+                title: 'Software Head',
+                description: `
+- Restructured the software committee and established clear roles and responsibilities.  
+- Built a documentation and training system (Knowledge Base) for sustainable knowledge transfer.  
+- Introduced continuous improvement strategies and internal performance reviews.  
+- Developed a long-term plan ensuring continuity, leadership succession, and efficiency.`
+            },
+            {
+                title: 'Team Leader',
+                description: `
+- Conducted internal TOT sessions to train future leaders.  
+- Organized external workshops to strengthen institutional and community engagement.  
+- Supervised recruitment and managed promotional booths.  
+- Led the team to the finals in two national competitions.  
+- Applied RACI Matrix and performance assessment tools to optimize collaboration and accountability.`,
+ image: 'img/team_leader.jpg'
+            }
+        ],
+        cvPath: 'C.V/Embedded/Yousef Gomaa.pdf'
+    }
+},
+
         stem: {
             ar: {
                 title: 'تعليم STEM',
@@ -718,8 +933,11 @@ Basic Programming بلغة C
                     },
                     {
                         title: 'مسابقة الهلال الأحمر الإماراتي',
-                        description: `حصلت على شهادة شكر وتقدير من هيئة الهلال الأحمر الإماراتي لعام 2018–2019،
-وذلك لمشاركتي في جائزة عون للخدمة المجتمعية، والمساهمة في فوز المدرسة بالمركز الثالث على مستوى إمارة أبوظبي – بني ياس.`,
+                        description: `المشاركة في مسابقة الهلال الأحمر الإماراتي (جائزة عون) خلال فترة الثانوية العامة كممثل للمدرسة.
+التأهل للتصفيات النهائية على مستوى الدولة والفوز بالمركز الثالث.
+تنفيذ مشروع تطوعي يهدف إلى خدمة المجتمع وتعزيز قيم العمل الإنساني.
+اكتساب خبرة في العمل الجماعي والتخطيط والتنفيذ ضمن بيئة تنافسية.
+تعزيز مهارات القيادة، المبادرة، والمسؤولية المجتمعية.`,
                     },
                     {
                         title: 'مسابقة MUTEX IEEE الزقازيق',
@@ -759,8 +977,11 @@ During this stage, I organized both internal and external training sessions to e
                     },
                     {
                         title: 'UAE Red Crescent Competition',
-                        description: `I received a Certificate of Appreciation from the Emirates Red Crescent for the year 2018–2019,
-in recognition of my participation in the Aoun Award for Community Service and contributing to my school winning 3rd place at the Abu Dhabi Emirate level – Baniyas.`,
+                      description: `Participated in the UAE Red Crescent humanitarian competition (Awn Award) during high school as the school representative.
+Qualified for the national finals and achieved 3rd place across the UAE.
+Implemented a volunteer community project promoting humanitarian values and social impact.
+Gained experience in teamwork, planning, and execution within a competitive environment.
+Enhanced leadership, initiative, and social responsibility skills.`,
                     },
                     {
                         title: 'MUTEX IEEE Zagazig Competition',
