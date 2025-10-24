@@ -223,7 +223,7 @@ CAN & LIN Protocols في مجال الـ Embedded Systems.
 كان دوري قيادة المشروع والإشراف على جوانب السوفتوير والهاردوير، 
 من الفكرة وحتى التنفيذ، لضمان تحقيق أعلى معايير الجودة والابتكار.
 `,
-                        video: "/vid/البيت الذكي .mp4"
+                        video: "vid/البيت الذكي .mp4"
                         
                     },
                     {
@@ -244,7 +244,7 @@ CAN & LIN Protocols في مجال الـ Embedded Systems.
 المشاركة في تطوير السوفتوير، 
 وتكامل الـ IoT لمتابعة البيانات في الزمن الحقيقي.
 `,
-                        video: "/vid/Agre_Tech.mp4"
+                        video: "vid/Agre_Tech.mp4"
                     },
                     {
                         title: 'Dual Mode RC Car',
@@ -381,7 +381,7 @@ My role focused on leading the project and overseeing
 both software and hardware aspects — from concept to execution — 
 to ensure top quality and innovation.
 `,
-                        video: "/vid/البيت الذكي .mp4"
+                        video: "vid/البيت الذكي .mp4"
                     },
                     {
                         title: 'Smart Green House with IoT',
@@ -402,7 +402,7 @@ Project planning and management, circuit design and integration,
 co-developing embedded software, 
 and implementing IoT for real-time data visualization and control.
 `,
-                        video: "/vid/Agre_Tech.mp4"
+                        video: "vid/Agre_Tech.mp4"
                     },
                     {
                         title: 'Dual Mode RC Car',
@@ -624,7 +624,7 @@ to understand web development from design to practical implementation.
                     - 3 أنواع مختلفة من Motor Drivers
                     - 3 مشاريع على PLCs من شركات مختلفة
                     `,
-                    image: "/img/HA6jpg.jpg",
+                    image: "img/HA6jpg.jpg",
                     // image: "/img/HA7jpg.jpg",
                     // image: "/img/HA2jpg.jpg"
 
@@ -639,7 +639,7 @@ to understand web development from design to practical implementation.
                     خلال التدريب، تعرفت على بيئة العمل الصناعية وكيفية إدارة المشاريع من مرحلة التصميم إلى التنفيذ.
                     كما أُتيحت لي الفرصة للتعامل مباشرة مع الرئيس التنفيذي للشركة (CEO)، وكانت تجربة تعليمية وإنسانية رائعة.
                 `,
-                 image: "/img/MAM1.jpg",
+                 image: "img/MAM1.jpg",
             }
         ],
        projects: [
@@ -661,7 +661,7 @@ to understand web development from design to practical implementation.
     {
         title: 'محاكاة PLC – خط إنتاج بسير وبوشر (Conveyor & Pusher Line)',
         description: 'نموذج محاكاة لخط إنتاج صناعي يحتوي على سير ناقل وبوشر لفرز المنتجات بشكل آلي باستخدام PLC وبرامج المحاكاة.',
-        video: "/vid/PLC_tasks/PLC_1.mp4"
+        video: "vid/PLC_tasks/PLC_1.mp4"
     }
 ],
 
@@ -688,7 +688,7 @@ to understand web development from design to practical implementation.
                     
                     
                 `,
-                image: "/img/HA6jpg.jpg",
+                image: "img/HA6jpg.jpg",
 
             },
             {
@@ -702,29 +702,29 @@ to understand web development from design to practical implementation.
                     I also had the opportunity to meet and communicate with the company’s CEO, which made the experience even more insightful and inspiring.
                 
                 `,
-                 image: "/img/MAM1.jpg",
+                 image: "img/MAM1.jpg",
             }
         ],
         projects: [
     {
         title: 'Washing Machine Circuit – Classic Control',
         description: 'A practical project implementing a washing machine circuit using classic control methods, including electrical wiring, protection devices, and relays.',
-        video: "/vid/CLASSIC.mp4"
+        video: "vid/CLASSIC.mp4"
     },
     {
         title: 'PLC Simulation – Color Detection',
         description: 'A PLC simulation project for color detection and sorting, demonstrating the use of sensors and logic control in smart industrial applications.',
-        video: "/vid/PLC_tasks/task2.mp4"
+        video: "vid/PLC_tasks/task2.mp4"
     },
     {
         title: 'PLC Simulation – Box Filling System',
         description: 'A full simulation of an automated box filling system using PLC, integrating sensors, conveyors, and actuators for efficient production control.',
-        video: "/vid/PLC_tasks/PLC_5.mp4"
+        video: "vid/PLC_tasks/PLC_5.mp4"
     },
     {
         title: 'PLC Simulation – Conveyor & Pusher Production Line',
         description: 'An industrial line simulation featuring a conveyor and pusher system controlled by PLC, designed for automated product handling and sorting.',
-        video: "/vid/PLC_tasks/PLC_1.mp4"
+        video: "vid/PLC_tasks/PLC_1.mp4"
     }
 ],
 
