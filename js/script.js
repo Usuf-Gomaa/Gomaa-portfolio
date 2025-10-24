@@ -651,6 +651,7 @@ to understand web development from design to practical implementation.
     {
         title: 'محاكاة PLC – كشف الألوان (Color Detection)',
         description: 'مشروع محاكاة باستخدام PLC Simulation للتعرف على الألوان وفرز العناصر حسب اللون، ضمن تطبيقات التحكم الصناعي الذكي.',
+
         video: "vid/PLC_tasks/task2.mp4"
     },
     {
