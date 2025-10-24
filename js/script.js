@@ -653,11 +653,12 @@ to understand web development from design to practical implementation.
         description: 'مشروع محاكاة باستخدام PLC Simulation للتعرف على الألوان وفرز العناصر حسب اللون، ضمن تطبيقات التحكم الصناعي الذكي.',
 
         video: "vid/PLC_tasks/task2.mp4"
+        
     },
     {
         title: 'محاكاة PLC – تعبئة الصناديق (Box Filling)',
         description: 'محاكاة متكاملة لعملية تعبئة الصناديق باستخدام PLC، تشمل الحساسات والسيور والمحركات لتنظيم عملية الإنتاج.',
-        video: "vid/PLC_tasks/PLC_5.mp4"
+        video: "vid/PLC_tasks/plc_5.mp4"
     },
     {
         title: 'محاكاة PLC – خط إنتاج بسير وبوشر (Conveyor & Pusher Line)',
